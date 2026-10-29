@@ -1,0 +1,141 @@
+/* Estilos Globais - The Otis Digital Bridge */
+:root {
+  --otis-pink: #ed145b;
+  --otis-pink-hover: #c90e4c;
+  --otis-navy: #0d233a;
+  --otis-navy-light: #162f4d;
+  --otis-slate: #1e293b;
+  --otis-text: #1d1d1b;
+  --otis-muted: #64748b;
+  --otis-border: #e2e8f0;
+  --otis-bg: #f8fafc;
+}
+
+body {
+  margin: 0;
+  font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+  background-color: var(--otis-bg);
+  color: var(--otis-text);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Botões Customizados */
+.btn-otis-pink {
+  background-color: var(--otis-pink);
+  color: #ffffff;
+  border: 1px solid var(--otis-pink);
+  font-weight: 600;
+  transition: all 0.2s ease-in-out;
+}
+
+.btn-otis-pink:hover, .btn-otis-pink:focus {
+  background-color: var(--otis-pink-hover);
+  border-color: var(--otis-pink-hover);
+  color: #ffffff;
+}
+
+.btn-otis-navy {
+  background-color: var(--otis-navy);
+  color: #ffffff;
+  border: 1px solid var(--otis-navy);
+  font-weight: 600;
+  transition: all 0.2s ease-in-out;
+}
+
+.btn-otis-navy:hover, .btn-otis-navy:focus {
+  background-color: var(--otis-navy-light);
+  border-color: var(--otis-navy-light);
+  color: #ffffff;
+}
+
+/* Cartões com Espaçamento e Bordas Suaves */
+.card-otis {
+  background: #ffffff;
+  border: 1px solid var(--otis-border);
+  border-radius: 14px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.04);
+  transition: box-shadow 0.2s ease;
+}
+
+.card-otis:hover {
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.06);
+}
+
+/* Badges de Status Operacional */
+.badge-critical {
+  background-color: #dc2626;
+  color: #ffffff;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+
+.badge-warning {
+  background-color: #ea580c;
+  color: #ffffff;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+
+.badge-ok {
+  background-color: #16a34a;
+  color: #ffffff;
+  font-weight: 700;
+}
+
+/* Ticker de Emergência */
+.emergency-ticker {
+  background-color: #dc2626;
+  color: #ffffff;
+  box-shadow: 0 4px 14px rgba(220, 38, 38, 0.35);
+}
+
+/* Timeline da Maturidade Digital */
+.timeline-circle {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 1.15rem;
+}
+
+.timeline-circle.active {
+  background-color: var(--otis-pink);
+  color: white;
+  box-shadow: 0 0 0 8px rgba(237, 20, 91, 0.15);
+}
+
+.timeline-circle.completed {
+  background-color: #1e293b;
+  color: white;
+}
+
+.timeline-circle.future {
+  border: 2px dashed #94a3b8;
+  color: #64748b;
+  background-color: #ffffff;
+}
+
+/* Mapa da Frota */
+.fleet-map-container {
+  background: radial-gradient(circle at center, #1a2332 0%, #0c131f 100%);
+  border-radius: 12px;
+  position: relative;
+  min-height: 380px;
+  overflow: hidden;
+}
+
+.map-grid-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: 
+    linear-gradient(rgba(237, 20, 91, 0.08) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(237, 20, 91, 0.08) 1px, transparent 1px);
+  background-size: 28px 28px;
+}

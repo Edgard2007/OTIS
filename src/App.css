@@ -1,0 +1,167 @@
+/* App specific helpers */
+.cursor-pointer {
+  cursor: pointer;
+}
+
+.text-pink {
+  color: var(--otis-pink) !important;
+}
+
+.bg-pink {
+  background-color: var(--otis-pink) !important;
+}
+
+.border-pink {
+  border-color: var(--otis-pink) !important;
+}
+
+.bg-navy {
+  background-color: var(--otis-navy) !important;
+}
+
+.text-navy {
+  color: var(--otis-navy) !important;
+}
+
+.pulse-indicator {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  background-color: #ef4444;
+  border-radius: 50%;
+  animation: pulse 1.5s infinite;
+}
+
+/* Ajustes de layout para telas estreitas. */
+html,
+body {
+  overflow-x: hidden;
+}
+
+.technician-tabs {
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  padding-bottom: 0.75rem;
+  scrollbar-width: thin;
+}
+
+.technician-tabs .nav-item {
+  flex: 0 0 auto;
+}
+
+.emergency-message {
+  min-width: 0;
+}
+
+.emergency-message > span:last-child {
+  overflow-wrap: anywhere;
+}
+
+.fleet-map-label {
+  max-width: 120px;
+  white-space: normal !important;
+  overflow-wrap: anywhere;
+}
+
+@media (max-width: 767.98px) {
+  .container-fluid {
+    padding-left: 1rem !important;
+    padding-right: 1rem !important;
+  }
+
+  .navbar-brand-copy {
+    display: none;
+  }
+
+  .emergency-ticker .container-fluid {
+    align-items: stretch !important;
+  }
+
+  .emergency-message {
+    align-items: flex-start !important;
+  }
+
+  .emergency-actions {
+    width: 100%;
+    display: grid !important;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .emergency-actions .btn {
+    min-width: 0;
+    white-space: normal;
+  }
+
+  .card-otis {
+    border-radius: 10px;
+  }
+
+  .fleet-map-container {
+    min-height: 280px !important;
+    padding: 0.5rem !important;
+  }
+
+  .fleet-map-label {
+    max-width: 84px;
+    font-size: 0.62rem !important;
+    line-height: 1.15;
+  }
+
+  .fleet-map-container .position-relative.w-100.h-100 {
+    min-height: 220px !important;
+  }
+
+  .modal {
+    padding: 0.5rem !important;
+  }
+
+  .modal-dialog {
+    margin: 0;
+    max-width: none;
+    min-height: calc(100% - 1rem);
+  }
+
+  .modal-content {
+    min-height: 100%;
+  }
+
+  .modal-footer {
+    gap: 0.5rem;
+  }
+
+  .modal-footer .btn {
+    flex: 1 1 140px;
+  }
+
+  .operations-status-card {
+    align-items: flex-start !important;
+    gap: 1rem;
+  }
+
+  .operations-status-card > .badge {
+    align-self: flex-start;
+  }
+
+  .table-responsive {
+    margin-right: -0.5rem;
+  }
+
+  .table {
+    min-width: 620px;
+  }
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(0.95);
+    box-shadow: 0 0 0 0 rgba(239, 68, 68, 0.7);
+  }
+  70% {
+    transform: scale(1);
+    box-shadow: 0 0 0 8px rgba(239, 68, 68, 0);
+  }
+  100% {
+    transform: scale(0.95);
+    box-shadow: 0 0 0 0 rgba(239, 68, 68, 0);
+  }
+}
